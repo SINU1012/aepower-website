@@ -113,4 +113,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // 페이지 로드 완료 시 로딩 인디케이터 제거
-window.a
+window.addEventListener('load', function() {
+    const loader = document.querySelector('.loader');
+    if(loader) {
+        loader.style.display = 'none';
+    }
+});
