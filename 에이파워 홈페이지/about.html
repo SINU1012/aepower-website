@@ -2,48 +2,116 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>404 - 페이지를 찾을 수 없습니다</title>
+    <title>회사소개 - 에이파워(주)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="에이파워(주)는 전기안전 문화를 선도하며, 혁신적인 전기안전 솔루션을 제공하는 기업입니다.">
+    <meta name="keywords" content="에이파워, 전기안전, 전기기자재, 기술력, 회사소개, 문의하기">
+    <meta property="og:title" content="회사소개 - 에이파워(주)">
+    <meta property="og:description" content="에이파워(주)는 전기안전 문화를 선도하며, 혁신적인 전기안전 솔루션을 제공하는 기업입니다.">
+    <meta property="og:image" content="/assets/images/og-image-about.jpg">
+    <meta property="og:url" content="https://aepower-website.netlify.app/about.html">
+    <meta property="og:type" content="website">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f5f5f5;
-        }
-        .message {
-            text-align: center;
-        }
-        .message h1 {
-            font-size: 4rem;
-            color: #1e88e5;
-        }
-        .message p {
-            margin-top: 1rem;
-            font-size: 1.25rem;
-            color: #333;
-        }
-        .message a {
-            margin-top: 2rem;
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background-color: #1e88e5;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 0.5rem;
-        }
-        .message a:hover {
-            background-color: #0d47a1;
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body>
-    <div class="message">
-        <h1>404</h1>
-        <p>요청하신 페이지를 찾을 수 없습니다.</p>
-        <a href="/index.html">홈으로 돌아가기</a>
+<body class="bg-white">
+    <!-- Loader (선택 사항) -->
+    <div class="loader">
+        <svg class="animate-spin h-8 w-8 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+        </svg>
     </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="/index.html" class="flex items-center py-4" aria-label="홈">
+                            <span class="font-semibold text-gray-800 text-lg">AEPOWER</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/index.html" class="nav-link py-4 px-2 text-gray-700 font-semibold" aria-label="홈">홈</a>
+                    <a href="/about.html" class="nav-link py-4 px-2 text-gray-700 font-semibold" aria-label="회사소개">회사소개</a>
+                    <a href="/products.html" class="nav-link py-4 px-2 text-gray-700 font-semibold" aria-label="제품">제품</a>
+                    <a href="/technology.html" class="nav-link py-4 px-2 text-gray-700 font-semibold" aria-label="기술력">기술력</a>
+                    <a href="/contact.html" class="nav-link py-4 px-2 text-gray-700 font-semibold" aria-label="문의하기">문의하기</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button outline-none" aria-label="메뉴 열기">
+                        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <a href="/index.html" class="block py-2 px-4 text-sm hover:bg-gray-200" aria-label="홈">홈</a>
+            <a href="/about.html" class="block py-2 px-4 text-sm hover:bg-gray-200" aria-label="회사소개">회사소개</a>
+            <a href="/products.html" class="block py-2 px-4 text-sm hover:bg-gray-200" aria-label="제품">제품</a>
+            <a href="/technology.html" class="block py-2 px-4 text-sm hover:bg-gray-200" aria-label="기술력">기술력</a>
+            <a href="/contact.html" class="block py-2 px-4 text-sm hover:bg-gray-200" aria-label="문의하기">문의하기</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-3xl font-bold text-gray-800">회사소개</h2>
+                    <p class="mt-4 text-gray-600">에이파워는 전기안전 문화를 선도하는 기업입니다</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">비전</h3>
+                        <p class="text-gray-600">전기안전 문화의 확대에 기여하고 ESG경영을 선도하는 기업</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">핵심가치</h3>
+                        <p class="text-gray-600">안전성, 혁신성, 전문성을 바탕으로 한 제품 개발</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">연구개발</h3>
+                        <p class="text-gray-600">지속적인 R&D 투자를 통한 기술혁신 추구</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 추가적인 회사 소개 내용 섹션을 여기에 추가할 수 있습니다 -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">AEPOWER</h3>
+                    <p>에이파워(주)</p>
+                    <p>사업자등록번호: 525-87-02167</p>
+                    <p>전화: 063-714-3759</p>
+                    <p>팩스: 0504-223-3759</p>
+                    <p>Email: <a href="mailto:khy4021@naver.com" class="text-blue-500">khy4021@naver.com</a></p>
+                </div>
+                <div class="text-right">
+                    <p>주소: 전주시 완산구 천잠로 303, 대학본관 110호</p>
+                    <p class="mt-4">Copyright © 2024 AEPOWER Co., Ltd.</p>
+                    <p>All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>
