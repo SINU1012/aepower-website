@@ -1,7 +1,40 @@
+[build]
+  publish = "public" # 빌드 결과물이 위치하는 디렉토리
+  # publish = "dist" # 프레임워크에 따라 변경
+
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/about/"
+  to = "/about.html"
   status = 200
 
-[build]
-  publish = "/"
+[[redirects]]
+  from = "/products/"
+  to = "/products.html"
+  status = 200
+
+[[redirects]]
+  from = "/technology/"
+  to = "/technology.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact/"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "http://yourdomain.com/*"
+  to = "https://yourdomain.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "www.yourdomain.com/*"
+  to = "https://yourdomain.com/:splat"
+  status = 301
+  force = true
