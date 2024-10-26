@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>에이파워(주) - 전기안전의 미래를 선도하는 기업</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        :root {
+            --primary-color: #1e88e5;
+            --secondary-color: #0d47a1;
+            --text-color: #333;
+            --light-gray: #f5f5f5;
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        .hero-pattern {
+            background-color: var(--secondary-color);
+            background-image: linear-gradient(315deg, #1a237e 0%, #0d47a1 74%);
+        }
+        .nav-link:hover {
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+        .card-hover {
+            transition: transform 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+        }
+        .mobile-menu {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .mobile-menu.active {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="/index.html" class="flex items-center py-4">
+                            <span class="font-semibold text-gray-800 text-lg">AEPOWER</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/index.html" class="nav-link py-4 px-2 text-gray-700 font-semibold">홈</a>
+                    <a href="/about.html" class="nav-link py-4 px-2 text-gray-700 font-semibold">회사소개</a>
+                    <a href="/products.html" class="nav-link py-4 px-2 text-gray-700 font-semibold">제품</a>
+                    <a href="/technology.html" class="nav-link py-4 px-2 text-gray-700 font-semibold">기술력</a>
+                    <a href="/contact.html" class="nav-link py-4 px-2 text-gray-700 font-semibold">문의하기</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern">
+        <div class="max-w-7xl mx-auto py-32 px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl">
+                <span class="block">전기안전의 새로운 기준</span>
+                <span class="block text-blue-200">에이파워가 만들어갑니다</span>
+            </h1>
+            <p class="mt-3 max-w-md mx-auto text-base text-gray-100 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                감전사고 ZERO를 향한 혁신적인 전기안전 솔루션
+            </p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-3xl font-bold text-gray-800">회사소개</h2>
+                <p class="mt-4 text-gray-600">에이파워는 전기안전 문화를 선도하는 기업입니다</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">비전</h3>
+                    <p class="text-gray-600">전기안전 문화의 확대에 기여하고 ESG경영을 선도하는 기업</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">핵심가치</h3>
+                    <p class="text-gray-600">안전성, 혁신성, 전문성을 바탕으로 한 제품 개발</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">연구개발</h3>
+                    <p class="text-gray-600">지속적인 R&D 투자를 통한 기술혁신 추구</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-3xl font-bold text-gray-800">주요 제품</h2>
+                <p class="mt-4 text-gray-600">혁신적인 전기안전 솔루션을 제공합니다</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/400/300" alt="전선방호관 취부기" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">전선방호관 취부기</h3>
+                        <p class="text-gray-600">전력선 감전예방을 위한 혁신적인 방호장치</p>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/400/300" alt="간접활선용 피뢰기 브라켓" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">간접활선용 피뢰기 브라켓</h3>
+                        <p class="text-gray-600">작업자 안전을 위한 간접설치 가능 구조</p>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/400/300" alt="멀티체결 전기위험 표지구" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">멀티체결 전기위험 표지구</h3>
+                        <p class="text-gray-600">범용성과 안전성을 갖춘 경고장치</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-3xl font-bold text-gray-800">문의하기</h2>
+                <p class="mt-4 text-gray-600">언제든 연락주시기 바랍니다</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">연락처</h3>
+                    <p class="text-gray-600">Tel: 063-714-3759</p>
+                    <p class="text-gray-600">Fax: 0504-223-3759</p>
+                    <p class="text-gray-600">Email: khy4021@naver.com</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">주소</h3>
+                    <p class="text-gray-600">전주시 완산구 천잠로 303, 대학본관 110호</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">AEPOWER</h3>
+                    <p>에이파워(주)</p>
+                    <p>사업자등록번호: 525-87-02167</p>
+                </div>
+                <div class="text-right">
+                    <p>Copyright © 2024 AEPOWER Co., Ltd.</p>
+                    <p>All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
