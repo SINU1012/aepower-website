@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>제품소개 - 에이파워(주)</title>
+    <meta name="description" content="에이파워(주)의 혁신적인 전기안전 솔루션과 주요 제품들을 소개합니다. 감전사고 ZERO를 향한 우리의 노력을 확인해보세요.">
+    <meta name="keywords" content="에이파워, 전기안전, 전기기자재, 제품소개, 감전예방, 전선방호관, 피뢰기 브라켓">
+    <meta property="og:title" content="제품소개 - 에이파워(주)">
+    <meta property="og:description" content="에이파워(주)의 혁신적인 전기안전 솔루션과 주요 제품들을 소개합니다. 감전사고 ZERO를 향한 우리의 노력을 확인해보세요.">
+    <meta property="og:image" content="/assets/images/og-image-products.jpg">
+    <meta property="og:url" content="https://yourdomain.com/products.html">
+    <meta property="og:type" content="website">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <style>
         :root {
             --primary-color: #1e88e5;
@@ -27,22 +34,20 @@
             height: 3px;
             background-color: var(--primary-color);
         }
-        .product-card {
-            transition: all 0.3s ease;
-        }
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        .hero-pattern {
+            background-color: var(--secondary-color);
+            background-image: linear-gradient(315deg, #1a237e 0%, #0d47a1 74%);
         }
         .nav-link:hover {
             color: var(--primary-color);
             transition: color 0.3s ease;
         }
         .card-hover {
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .card-hover:hover {
             transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
         .btn-primary {
             background-color: var(--primary-color);
@@ -71,34 +76,53 @@
 </head>
 <body>
     <!-- Navigation -->
-<nav class="bg-white shadow-lg fixed w-full z-50">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="flex justify-between">
-            <div class="flex space-x-7">
-                <div>
-                    <a href="./index.html" class="flex items-center py-4">
-                        <span class="font-semibold text-gray-800 text-lg">AEPOWER</span>
-                    </a>
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="/index.html" class="flex items-center py-4" aria-label="홈">
+                            <span class="font-semibold text-gray-800 text-lg">AEPOWER</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/index.html" class="nav-link py-4 px-2 text-gray-700 font-semibold" aria-label="홈">홈</a>
+                    <a href="/about.html" class="nav-link py-4 px-2 text-gray-700 font-semibold" aria-label="회사소개">회사소개</a>
+                    <a href="/products.html" class="nav-link py-4 px-2 text-gray-700 font-semibold" aria-label="제품소개">제품</a>
+                    <a href="/technology.html" class="nav-link py-4 px-2 text-gray-700 font-semibold" aria-label="기술력">기술력</a>
+                    <a href="/contact.html" class="nav-link py-4 px-2 text-gray-700 font-semibold" aria-label="문의하기">문의하기</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="outline-none" aria-label="메뉴 열기">
+                        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="./index.html" class="nav-link py-4 px-2 text-gray-700 font-semibold">홈</a>
-                <a href="./about.html" class="nav-link py-4 px-2 text-gray-700 font-semibold">회사소개</a>
-                <a href="./products.html" class="nav-link py-4 px-2 text-gray-700 font-semibold">제품</a>
-                <a href="./technology.html" class="nav-link py-4 px-2 text-gray-700 font-semibold">기술력</a>
-                <a href="./contact.html" class="nav-link py-4 px-2 text-gray-700 font-semibold">문의하기</a>
-            </div>
         </div>
-    </div>
-</nav>
-
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="/index.html" class="block py-2 px-4 text-sm hover:bg-gray-200" aria-label="홈">홈</a>
+            <a href="/about.html" class="block py-2 px-4 text-sm hover:bg-gray-200" aria-label="회사소개">회사소개</a>
+            <a href="/products.html" class="block py-2 px-4 text-sm hover:bg-gray-200" aria-label="제품소개">제품</a>
+            <a href="/technology.html" class="block py-2 px-4 text-sm hover:bg-gray-200" aria-label="기술력">기술력</a>
+            <a href="/contact.html" class="block py-2 px-4 text-sm hover:bg-gray-200" aria-label="문의하기">문의하기</a>
+        </div>
+    </nav>
+    
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h1 class="text-4xl font-bold text-gray-800 mb-4">제품소개</h1>
-                <p class="text-xl text-gray-600">혁신적인 전기안전 솔루션을 제공합니다</p>
-            </div>
+    <section class="hero-pattern">
+        <div class="max-w-7xl mx-auto py-32 px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl">
+                <span class="block">전기안전의 새로운 기준</span>
+                <span class="block text-blue-200">에이파워가 만들어갑니다</span>
+            </h1>
+            <p class="mt-3 max-w-md mx-auto text-base text-gray-100 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                감전사고 ZERO를 향한 혁신적인 전기안전 솔루션
+            </p>
         </div>
     </section>
 
@@ -111,10 +135,10 @@
                     <div class="order-2 md:order-1">
                         <h2 class="text-3xl font-bold text-gray-800 mb-6">전선방호관 취부기</h2>
                         <div class="space-y-4 text-gray-600">
-                            <p class="mb-6">전력선 감전예방을 위한 방호장치중 간접으로 전선에 방호관을 체결할 때 사용되는 혁신적인 장비입니다.</p>
+                            <p class="mb-6">전력선 감전예방을 위한 방호장치 중 간접으로 전선에 방호관을 체결할 때 사용되는 혁신적인 장비입니다.</p>
                             
                             <h3 class="text-xl font-bold text-gray-800 mb-4">주요 특징</h3>
-                            <ul class="space-y-2">
+                            <ul class="space-y-2 list-disc list-inside">
                                 <li class="feature-item">체결성능 우수</li>
                                 <li class="feature-item">작업공정 단순화</li>
                                 <li class="feature-item">작업자 직접작업 방지</li>
@@ -123,7 +147,7 @@
                         </div>
                     </div>
                     <div class="order-1 md:order-2">
-                        <img src="/api/placeholder/600/400" alt="전선방호관 취부기" class="rounded-lg shadow-lg w-full">
+                        <img src="/assets/images/product1.jpg" alt="전선방호관 취부기" class="rounded-lg shadow-lg w-full">
                     </div>
                 </div>
             </div>
@@ -132,15 +156,15 @@
             <div class="mb-20">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <img src="/api/placeholder/600/400" alt="간접활선용 피뢰기 브라켓" class="rounded-lg shadow-lg w-full">
+                        <img src="/assets/images/product2.jpg" alt="간접활선용 피뢰기 브라켓" class="rounded-lg shadow-lg w-full">
                     </div>
                     <div>
                         <h2 class="text-3xl font-bold text-gray-800 mb-6">간접활선용 피뢰기 브라켓</h2>
                         <div class="space-y-4 text-gray-600">
-                            <p class="mb-6">전력기자재중 피뢰기 체결시 사용하는 브라켓을 간접으로 설치가 가능한 구조로 만든 혁신적인 제품입니다.</p>
+                            <p class="mb-6">전력기자재 중 피뢰기 체결 시 사용하는 브라켓을 간접으로 설치가 가능한 구조로 만든 혁신적인 제품입니다.</p>
                             
                             <h3 class="text-xl font-bold text-gray-800 mb-4">주요 특징</h3>
-                            <ul class="space-y-2">
+                            <ul class="space-y-2 list-disc list-inside">
                                 <li class="feature-item">조립공정 간소화</li>
                                 <li class="feature-item">작업공정 축소</li>
                                 <li class="feature-item">작업자 직접작업 방지</li>
@@ -160,16 +184,16 @@
                             <p class="mb-6">모든 전선 규격에 적용 가능하고 건축용 방호관에도 설치할 수 있는 범용성 높은 안전 표지 장치입니다.</p>
                             
                             <h3 class="text-xl font-bold text-gray-800 mb-4">주요 특징</h3>
-                            <ul class="space-y-2">
-                                <li class="feature-item">전선굵기와 무관한 설치 가능</li>
+                            <ul class="space-y-2 list-disc list-inside">
+                                <li class="feature-item">전선 굵기와 무관한 설치 가능</li>
                                 <li class="feature-item">별도 체결공구 불필요</li>
-                                <li class="feature-item">2중작업 예방으로 효율성 증대</li>
+                                <li class="feature-item">2중 작업 예방으로 효율성 증대</li>
                                 <li class="feature-item">예산 절감 효과</li>
                             </ul>
                         </div>
                     </div>
                     <div class="order-1 md:order-2">
-                        <img src="/api/placeholder/600/400" alt="멀티체결 전기위험 표지구" class="rounded-lg shadow-lg w-full">
+                        <img src="/assets/images/product3.jpg" alt="멀티체결 전기위험 표지구" class="rounded-lg shadow-lg w-full">
                     </div>
                 </div>
             </div>
@@ -178,7 +202,7 @@
             <div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <img src="/api/placeholder/600/400" alt="중대재해 예방용 전선휴즈통합형 농사용 계량기함" class="rounded-lg shadow-lg w-full">
+                        <img src="/assets/images/product4.jpg" alt="중대재해 예방용 전선휴즈통합형 농사용 계량기함" class="rounded-lg shadow-lg w-full">
                     </div>
                     <div>
                         <h2 class="text-3xl font-bold text-gray-800 mb-6">중대재해 예방용 전선휴즈통합형 농사용 계량기함</h2>
@@ -186,10 +210,10 @@
                             <p class="mb-6">차량 진입이 어려운 농사용 전기 공급용 전신주의 안전사고 예방을 위한 혁신적인 솔루션입니다.</p>
                             
                             <h3 class="text-xl font-bold text-gray-800 mb-4">주요 특징</h3>
-                            <ul class="space-y-2">
+                            <ul class="space-y-2 list-disc list-inside">
                                 <li class="feature-item">추락사고 예방 효과</li>
-                                <li class="feature-item">일기불순시 안전사고 방지</li>
-                                <li class="feature-item">농사용 전주 인력오름 차단</li>
+                                <li class="feature-item">일기 불순 시 안전사고 방지</li>
+                                <li class="feature-item">농사용 전주 인력 오름 차단</li>
                                 <li class="feature-item">안전사고 ZERO 달성</li>
                             </ul>
                         </div>
@@ -204,7 +228,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-bold text-gray-800 mb-8">제품 문의하기</h2>
             <p class="text-gray-600 mb-8">더 자세한 제품 정보가 필요하시다면 언제든 문의해주세요.</p>
-            <a href="contact.html" class="inline-block bg-blue-500 text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-600 transition-colors">
+            <a href="/contact.html" class="inline-block bg-blue-500 text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-600 transition-colors">
                 문의하기
             </a>
         </div>
@@ -218,13 +242,28 @@
                     <h3 class="text-2xl font-bold mb-4">AEPOWER</h3>
                     <p>에이파워(주)</p>
                     <p>사업자등록번호: 525-87-02167</p>
+                    <p>전화: 063-714-3759</p>
+                    <p>팩스: 0504-223-3759</p>
+                    <p>Email: <a href="mailto:khy4021@naver.com" class="text-blue-500">khy4021@naver.com</a></p>
                 </div>
                 <div class="text-right">
-                    <p>Copyright © 2024 AEPOWER Co., Ltd.</p>
+                    <p>주소: 전주시 완산구 천잠로 303, 대학본관 110호</p>
+                    <p class="mt-4">Copyright © 2024 AEPOWER Co., Ltd.</p>
                     <p>All rights reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="/assets/js/main.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            var mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
